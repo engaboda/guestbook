@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'guestmsg/main.css' %}" />
+</head>
+
+<body>
+    <div class="container" style="width: 450px; height: 450px;margin-left: 350px;">
+        <div class='form' style="background-color: antiquewhite;width: 650px; height: 250px; padding: 30px;">
+            <form action="" method="post">{%csrf_token%}
+                <div style="margin-bottom: 10px;">
+                        <h4 style="display: inline;">Name:</h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <input type="text" name='username' style="width: 350px;">
+                </div>
+                <div>
+                        <h4 style="display: inline;">Message:</h4>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<textarea name='message' aria-orientation="vertical" cols="50" style="height: 100px;"></textarea>
+                </div>
+                <input type="submit" name="submit" value="Send" style="margin-left:250px; margin-top: 20px;">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
